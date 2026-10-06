@@ -8,20 +8,20 @@
 <body>
     
 
-<h1>100 affiches des plats de petit dejeuner</h1>
+<h1>100 affiches des plats de dessert</h1>
 
-<p>Voici une collection de 100 affiches de plats de de petit dejeuner.</p>
+<p>Voici une collection de 100 affiches de plats de dessert.</p>
 <p>Données collectées sur Wikidata.</p>
 
 <pre>
     <code>
 
-#defaultView:ImageGrid
-SELECT ?dish ?dishLabel ?image WHERE {
+SELECT ?dish ?image WHERE {
   SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],mul,en". }
   ?dish wdt:P31 wd:Q746549.
-  ?dish wdt:P495 wd:Q30.
+  ?dish wdt:P8431 wd:Q182940.
   OPTIONAL { ?dish wdt:P18 ?image. }
+  
 }
 LIMIT 100
       
