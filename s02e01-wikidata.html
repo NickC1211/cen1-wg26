@@ -8,20 +8,20 @@
 <body>
     
 
-<h1>100 affiches des plats de dessert</h1>
+<h1>100 affiches des plats francais</h1>
 
-<p>Voici une collection de 100 affiches de plats de dessert.</p>
+<p>Voici une collection de 100 affiches de plats francais</p>
 <p>Données collectées sur Wikidata.</p>
 
 <pre>
     <code>
 
-SELECT ?dish ?image WHERE {
+#defaultView:ImageGrid
+SELECT ?dish ?dishLabel ?image WHERE {
   SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],mul,en". }
   ?dish wdt:P31 wd:Q746549.
-  ?dish wdt:P8431 wd:Q182940.
+  ?dish wdt:P495 wd:Q142.
   OPTIONAL { ?dish wdt:P18 ?image. }
-  
 }
 LIMIT 100
       
@@ -29,6 +29,6 @@ LIMIT 100
 </pre>
 
 <div>
-    <iframe style="width: 80vw; height: 50vh; border: none;" src="https://query.wikidata.org/embed.html#SELECT%20%3Fdish%20%3FdishLabel%20%3Fimage%20WHERE%20%7B%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%2Cmul%2Cen%22.%20%7D%0A%20%20%3Fdish%20wdt%3AP31%20wd%3AQ746549.%0A%20%20%3Fdish%20wdt%3AP8431%20wd%3AQ80973.%0A%20%20OPTIONAL%20%7B%20%3Fdish%20wdt%3AP18%20%3Fimage.%20%7D%0A%7D%0ALIMIT%20100" referrerpolicy="origin" sandbox="allow-scripts allow-same-origin allow-popups"></iframe>
+    <iframe style="width: 80vw; height: 50vh; border: none;" src="https://query.wikidata.org/embed.html#SELECT%20%3Fdish%20%3FdishLabel%20%3Fimage%20WHERE%20%7B%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%2Cmul%2Cen%22.%20%7D%0A%20%20%3Fdish%20wdt%3AP31%20wd%3AQ746549.%0A%20%20%3Fdish%20wdt%3AP495%20wd%3AQ142.%0A%20%20OPTIONAL%20%7B%20%3Fdish%20wdt%3AP18%20%3Fimage.%20%7D%0A%7D%0ALIMIT%20100" referrerpolicy="origin" sandbox="allow-scripts allow-same-origin allow-popups"></iframe>
 </body>
 </html>
